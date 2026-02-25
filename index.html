@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Michael J. Stadulis | Answering the Call | District 121</title>
+
+  <meta name="description" content="Michael J. Stadulis for Pennsylvania State Representative, District 121. Leadership rooted in public service." />
+  <meta name="theme-color" content="#0b1f3a" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Michael J. Stadulis | Answering the Call | District 121" />
+  <meta property="og:description" content="Lifelong paramedic and public safety professional, answering a new call to serve District 121 in Harrisburg." />
+  <meta property="og:type" content="website" />
+  <!-- Put your image at /images/scooby.jpg -->
+  <meta property="og:image" content="/images/scooby.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+
+  <style>
+    :root{
+      --bg:#071423;
+      --card:#0b1f3a;
+      --text:#f3f6fb;
+      --muted:#c8d4ea;
+      --accent:#e31b23;
+      --accent2:#1f5fbf;
+      --line:rgba(255,255,255,.12);
+      --shadow: 0 18px 60px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1140px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; font-family:var(--font); color:var(--text); background:
+      radial-gradient(1000px 700px at 20% 10%, rgba(31,95,191,.28), transparent 60%),
+      radial-gradient(900px 700px at 80% 20%, rgba(227,27,35,.25), transparent 55%),
+      linear-gradient(180deg, #06111f, #06111f 35%, #070f1a);
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+
+    /* Buttons */
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 16px; border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      color:var(--text); font-weight:900; letter-spacing:.2px;
+      transition:.18s ease; cursor:pointer;
+      box-shadow: 0 6px 18px rgba(0,0,0,.18);
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:hover{transform: translateY(-1px); background:rgba(255,255,255,.10)}
+    .btn:active{transform: translateY(0px)}
+    .btn.primary{background:linear-gradient(135deg, var(--accent), #ff4a52); border:none}
+    .btn.blue{background:linear-gradient(135deg, var(--accent2), #5aa0ff); border:none}
+    .tag{
+      display:inline-flex; align-items:center;
+      padding:7px 12px; border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      color:var(--muted);
+      font-weight:800; font-size:13px;
+    }
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background:rgba(6,17,31,.72);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar{display:flex; align-items:center; justify-content:space-between; padding:12px 0; gap:14px}
+    .brand{display:flex; flex-direction:column; line-height:1.05}
+    .brand strong{font-size:16px; letter-spacing:.2px}
+    .brand span{font-size:12.5px; color:var(--muted)}
+    nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+    nav a{color:var(--muted); font-weight:900; font-size:13px; padding:10px 10px; border-radius:10px}
+    nav a:hover{color:var(--text); background:rgba(255,255,255,.06)}
+    .actions{display:flex; gap:10px; align-items:center}
+    .menuBtn{display:none}
+    .mobileNav{display:none; padding:10px 0 14px; border-top:1px solid var(--line)}
+    .mobileNav a{display:block; padding:12px 10px; border-radius:10px; color:var(--muted); font-weight:900}
+    .mobileNav a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+
+    /* Hero */
+    .hero{padding:44px 0 28px}
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap:14px;
+      align-items:stretch;
+    }
+    .panel{
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .panel .inner{padding:24px}
+
+    .headline{font-size:42px; line-height:1.06; margin:10px 0 12px; letter-spacing:-.6px}
+    .sub{color:var(--muted); font-size:16px; line-height:1.65; margin:0 0 18px; max-width:70ch}
+    .heroMeta{display:flex; flex-wrap:wrap; gap:10px; margin:12px 0 16px}
+    .ctaRow{display:flex; flex-wrap:wrap; gap:10px}
+
+    /* Image */
+    .photo{
+      height: 560px;
+      border-top:1px solid var(--line);
+      overflow:hidden;
+      position:relative;
+      background: rgba(255,255,255,.04);
+    }
+    .photo img{
+      width:100%;
+      height:100%;
+      object-fit: cover;
+      object-position: 50% 18%;
+      display:block;
+      filter: contrast(1.05) saturate(1.05);
+      transform: scale(1.02);
+    }
+    .photo::after{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        linear-gradient(135deg, rgba(227,27,35,.22), rgba(31,95,191,.18)),
+        radial-gradient(600px 220px at 50% 12%, rgba(255,255,255,.10), transparent 65%),
+        linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.30));
+      pointer-events:none;
+    }
+    .photoBadge{
+      position:absolute; left:14px; bottom:14px; z-index:2;
+      padding:8px 12px; border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(6,17,31,.55);
+      backdrop-filter: blur(8px);
+      font-weight:900; font-size:12.5px; letter-spacing:.2px;
+    }
+
+    /* Sections */
+    section{padding:22px 0}
+    .sectionTitle{display:flex; align-items:flex-end; justify-content:space-between; gap:10px; margin:0 0 12px}
+    .sectionTitle h2{margin:0; font-size:22px; letter-spacing:-.2px}
+    .sectionTitle p{margin:0; color:var(--muted); font-weight:900; font-size:13px}
+
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:12px}
+    .grid2{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
+    .split{display:grid; grid-template-columns: 1fr 1fr; gap:12px; align-items:stretch}
+
+    .card{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.05);
+      border-radius:var(--radius);
+      padding:18px;
+    }
+    .card h3{margin:0 0 8px; font-size:16px}
+    .card p{margin:0; color:var(--muted); line-height:1.65; font-size:14px}
+    .list{margin:10px 0 0; padding:0 0 0 18px; color:var(--muted); line-height:1.75; font-size:14px}
+
+    .quote{
+      font-size:15px; line-height:1.7; color:var(--text);
+      border-left:3px solid rgba(255,255,255,.22);
+      padding-left:14px; margin:0;
+    }
+    .quote span{display:block; margin-top:8px; color:var(--muted); font-weight:900; font-size:13px}
+
+    /* Forms */
+    form{display:grid; gap:10px; margin-top:10px}
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(0,0,0,.25);
+      color:var(--text);
+      outline:none;
+    }
+    input::placeholder, textarea::placeholder{color:rgba(200,212,234,.7)}
+    textarea{min-height:110px; resize:vertical}
+
+    /* Footer */
+    footer{
+      padding:18px 0 26px;
+      border-top:1px solid var(--line);
+      margin-top:22px;
+      color:var(--muted);
+      font-size:12.5px;
+      line-height:1.6;
+    }
+    .footGrid{display:grid; grid-template-columns: 1.5fr .5fr; gap:12px; align-items:start}
+    .divider{height:12px}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .heroGrid{grid-template-columns:1fr}
+      .headline{font-size:36px}
+      nav{display:none}
+      .menuBtn{display:inline-flex}
+      .grid3{grid-template-columns:1fr}
+      .grid2,.split{grid-template-columns:1fr}
+      .footGrid{grid-template-columns:1fr}
+      .photo{height: 340px}
+    }
+    @media (max-width: 520px){
+      .headline{font-size:32px}
+      .photo{height: 300px}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="#top" aria-label="Home">
+          <strong>Michael J. Stadulis</strong>
+          <span>PA State Representative • District 121</span>
+        </a>
+
+        <nav aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#priorities">Priorities</a>
+          <a href="#getinvolved">Get Involved</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="actions">
+          <a class="btn blue" href="#getinvolved">Volunteer</a>
+          <a class="btn primary" href="#donate">Donate</a>
+          <button class="btn menuBtn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menu</button>
+        </div>
+      </div>
+
+      <div class="mobileNav" id="mobileNav" aria-label="Mobile navigation">
+        <a href="#about">About</a>
+        <a href="#priorities">Priorities</a>
+        <a href="#getinvolved">Get Involved</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <div class="hero">
+      <div class="wrap">
+        <div class="heroGrid">
+          <div class="panel">
+            <div class="inner">
+              <span class="tag">Answering the Call • District 121</span>
+              <h1 class="headline">Leadership rooted in public service.</h1>
+
+              <p class="sub">
+                For over three decades, Michael J. Stadulis has responded to thousands of emergency medical service calls
+                across District 121 — serving as a paramedic, public safety professional, dedicated volunteer, and a friend and neighbor.
+                Now, he’s stepping forward in a new way to ensure District 121 is heard, respected, and prioritized in Harrisburg.
+              </p>
+
+              <div class="heroMeta">
+                <span class="tag">Working Families</span>
+                <span class="tag">Public Safety</span>
+                <span class="tag">Healthcare</span>
+                <span class="tag">Schools & Infrastructure</span>
+              </div>
+
+              <div class="ctaRow" style="margin-top:6px">
+                <a class="btn blue" href="#getinvolved">Join the Campaign</a>
+                <a class="btn primary" href="#donate">Donate</a>
+                <a class="btn" href="#contact">Request a Yard Sign</a>
+              </div>
+            </div>
+
+            <div class="photo">
+              <img src="/images/scooby.jpg" alt="Michael J. Stadulis" />
+              <div class="photoBadge">District 121 • Pennsylvania</div>
+            </div>
+          </div>
+
+          <div class="panel" style="background:linear-gradient(180deg, rgba(31,95,191,.22), rgba(255,255,255,.04))">
+            <div class="inner">
+              <h3 style="margin:0 0 6px; font-size:16px">“It’s time to answer the call.”</h3>
+              <p style="margin:0 0 12px; color:var(--muted); line-height:1.6; font-size:14px">
+                Public service isn’t just a slogan — it’s been my life. All people deserve leadership that shows up consistently,
+                not only during emergencies, but every single day.
+              </p>
+
+              <p class="quote">
+                I’m not a career politician. I’m a lifelong resident and public servant within this district.
+                <span>— Michael J. Stadulis</span>
+              </p>
+
+              <div class="divider"></div>
+
+              <div class="card" style="background:rgba(255,255,255,.04)">
+                <h3 style="margin-bottom:6px">Quick Actions</h3>
+                <div class="ctaRow">
+                  <a class="btn blue" href="#getinvolved">Volunteer</a>
+                  <a class="btn" href="#contact">Yard Sign</a>
+                  <a class="btn primary" href="#donate">Donate</a>
+                </div>
+              </div>
+
+              <div class="divider"></div>
+
+              <div class="card" style="background:rgba(255,255,255,.04)">
+                <h3 style="margin-bottom:6px">Campaign Contact</h3>
+                <p style="margin:0; color:var(--muted); font-size:13px; line-height:1.7">
+                  <strong>Email:</strong> michaeljstadulisforstaterep@gmail.com<br />
+                  <strong>Phone:</strong> (000) 000-0000
+                </p>
+              </div>
+            </div>
+          </div>
+        </div><!-- /heroGrid -->
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>Meet Michael J. Stadulis</h2>
+          <p>Candidate • Pennsylvania State Representative • District 121</p>
+        </div>
+
+        <div class="split">
+          <div class="card">
+            <h3>Service That Started Early</h3>
+            <p>
+              Michael began serving in 1986 at the age of 14 through an observer program at Plains Volunteer Ambulance Association Medic 2,
+              building a lifelong commitment to social responsibility and community service.
+            </p>
+            <ul class="list">
+              <li>Graduate of James M. Coughlin High School</li>
+              <li>Luzerne County Community College paramedic curriculum</li>
+              <li>Decades of hands-on public service in District 121</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Public Safety & Union Leadership</h3>
+            <p>
+              Michael served with Mercy Hospital Medic 301, Geisinger Medic 303, Spellman Ambulance Medic 8, Hanover Twp. Medic 9,
+              and the Wilkes-Barre Fire Department on Medic 3 and 5 — including service as Chief Paramedic during the last 7 of his 25 years.
+            </p>
+            <p style="margin-top:10px">
+              As a strong union advocate and champion for employee rights, he served as a Union Steward with LIUNA Laborers Local 1310.
+            </p>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card">
+          <h3>Rooted in the Community</h3>
+          <p>
+            Michael and his wife Renee reside in the city of Wilkes-Barre and raised their son and daughter here.
+            As a family, they are proud to call St. Robert Bellarmine at St. Aloysius their parish home,
+            where they actively practice their Catholic faith and participate in church community fundraising.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIORITIES -->
+    <section id="priorities">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>Priorities</h2>
+          <p>Focused on what District 121 is living every day</p>
+        </div>
+
+        <div class="grid3">
+          <div class="card">
+            <h3>Working Families</h3>
+            <p>
+              Today, most working families must work more than two full-time jobs within a household
+              just to be able to provide for their families and keep up with the rising cost of living.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Public Safety</h3>
+            <p>
+              Public safety resources are strained. District 121 deserves leadership that supports first responders
+              and ensures communities have the resources to stay safe.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Healthcare & Prescriptions</h3>
+            <p>
+              Healthcare and prescription costs continue to rise. Families deserve affordable, reliable access to care.
+            </p>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>Utilities & Fees</h3>
+            <p>
+              Utility bills keep increasing with added fees. Families should not be punished by constant increases and new charges.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Infrastructure & Schools</h3>
+            <p>
+              Our area’s aging infrastructure demands attention, and school safety and security programs must remain a top priority.
+              We must also advocate for positive education policy upgrades that strengthen opportunities for our students and families.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GET INVOLVED -->
+    <section id="getinvolved">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>Get Involved</h2>
+          <p>This campaign is powered by neighbors like you</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>Volunteer</h3>
+            <p>Knock doors, make calls, help with events, or support Election Day efforts.</p>
+
+            <form onsubmit="return openMailto('volunteer')">
+              <input id="v_name" type="text" placeholder="Full name" required />
+              <input id="v_email" type="email" placeholder="Email" required />
+              <input id="v_phone" type="tel" placeholder="Phone (optional)" />
+              <textarea id="v_msg" placeholder="How would you like to help? (doors, phones, yard signs, events)"></textarea>
+              <button class="btn blue" type="submit">Volunteer</button>
+            </form>
+          </div>
+
+          <div class="card" id="donate">
+            <h3>Donate</h3>
+            <p>Help us reach voters, print materials, and build a campaign that wins for District 121.</p>
+
+            <div style="display:flex; flex-wrap:wrap; gap:10px; margin:12px 0 6px">
+              <!-- Replace # with your donation link -->
+              <a class="btn primary" href="#" onclick="alert('Replace this with your donation link (ActBlue/WinRed/PayPal/etc.).'); return false;">Donate Now</a>
+              <a class="btn" href="#contact">Request a Yard Sign</a>
+            </div>
+
+            <p style="margin:8px 0 0; color:var(--muted); font-size:12.5px; line-height:1.6">
+              Note: Replace the donation button with your official fundraising page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="sectionTitle">
+          <h2>Contact</h2>
+          <p>Questions, support, or press inquiries</p>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <h3>Send a Message</h3>
+            <p>Send a note — we’ll get back to you as soon as possible.</p>
+
+            <form onsubmit="return openMailto('contact')">
+              <input id="c_name" type="text" placeholder="Full name" required />
+              <input id="c_email" type="email" placeholder="Email" required />
+              <textarea id="c_msg" placeholder="Message" required></textarea>
+              <button class="btn" type="submit">Send</button>
+            </form>
+          </div>
+
+          <div class="card">
+            <h3>Stay Connected</h3>
+            <ul class="list">
+              <li><strong>Facebook:</strong> <a href="#" onclick="alert('Replace with your Facebook link.'); return false;">Add link</a></li>
+              <li><strong>Instagram:</strong> <a href="#" onclick="alert('Replace with your Instagram link.'); return false;">Add link</a></li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <div class="card" style="background:rgba(255,255,255,.04)">
+              <h3 style="margin-bottom:6px">Contact Information</h3>
+              <p style="margin-top:10px; color:var(--muted); font-size:13px; line-height:1.7">
+                <strong>Email:</strong> michaeljstadulisforstaterep@gmail.com<br />
+                <strong>Phone:</strong> (000) 000-0000
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section>
+      <div class="wrap">
+        <div class="panel">
+          <div class="inner">
+            <h2 style="margin:0 0 8px; font-size:22px">It’s time for leadership rooted in public service.</h2>
+            <p class="sub" style="max-width:none; margin-bottom:14px">
+              Join us and help bring District 121 a strong voice in Harrisburg.
+            </p>
+            <div class="ctaRow">
+              <a class="btn blue" href="#getinvolved">Join the Campaign</a>
+              <a class="btn primary" href="#donate">Donate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footGrid">
+        <div class="fine">
+          <strong>Friends of Michael J. Stadulis</strong><br />
+          Paid for by Friends of Michael J. Stadulis.<br />
+          Not authorized by any candidate or candidate’s committee.
+        </div>
+        <div class="fine" style="text-align:left">
+          <strong>Election</strong><br />
+          Pennsylvania State Representative<br />
+          District 121
+        </div>
+      </div>
+
+      <div style="height:10px"></div>
+
+      <div class="fine">
+        © <span id="year"></span> Friends of Michael J. Stadulis. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ======= Edit these two items ==========
+    const CAMPAIGN_EMAIL = "michaeljstadulisforstaterep@gmail.com";
+    const CAMPAIGN_SUBJECT_PREFIX = "District 121 Campaign";
+    // ======================================
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileNav = document.getElementById("mobileNav");
+
+    if (menuBtn && mobileNav) {
+      menuBtn.addEventListener("click", () => {
+        const open = mobileNav.style.display === "block";
+        mobileNav.style.display = open ? "none" : "block";
+        menuBtn.setAttribute("aria-expanded", open ? "false" : "true");
+      });
+
+      // Close mobile nav on click
+      document.querySelectorAll("#mobileNav a").forEach(a => {
+        a.addEventListener("click", () => {
+          mobileNav.style.display = "none";
+          menuBtn.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+
+    // Mailto helpers
+    function encode(str){ return encodeURIComponent(str || ""); }
+
+    function openMailto(type){
+      if (type === "volunteer") {
+        const name = document.getElementById("v_name").value;
+        const email = document.getElementById("v_email").value;
+        const phone = document.getElementById("v_phone").value;
+        const msg = document.getElementById("v_msg").value;
+
+        const subject = `${CAMPAIGN_SUBJECT_PREFIX} — Volunteer`;
+        const body =
+`Volunteer Signup
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+
+How I’d like to help:
+${msg}
+`;
+        window.location.href = `mailto:${CAMPAIGN_EMAIL}?subject=${encode(subject)}&body=${encode(body)}`;
+        return false;
+      }
+
+      if (type === "contact") {
+        const name = document.getElementById("c_name").value;
+        const email = document.getElementById("c_email").value;
+        const msg = document.getElementById("c_msg").value;
+
+        const subject = `${CAMPAIGN_SUBJECT_PREFIX} — Message`;
+        const body =
+`Name: ${name}
+Email: ${email}
+
+Message:
+${msg}
+`;
+        window.location.href = `mailto:${CAMPAIGN_EMAIL}?subject=${encode(subject)}&body=${encode(body)}`;
+        return false;
+      }
+
+      return false;
+    }
+  </script>
+</body>
+</html>
