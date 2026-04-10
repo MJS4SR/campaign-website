@@ -1,633 +1,1669 @@
-  <!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Michael J. Stadulis | Answering the Call | District 121</title>
+  <title>Michael J. Stadulis | District 121</title>
 
-  <meta name="description" content="Michael J. Stadulis for Pennsylvania State Representative, District 121. Leadership rooted in public service." />
-  <meta name="theme-color" content="#0b1f3a" />
+  <meta name="description" content="Michael J. Stadulis for Pennsylvania State Representative, District 121." />
+  <meta name="theme-color" content="#bfe3ff" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Michael J. Stadulis | Answering the Call | District 121" />
-  <meta property="og:description" content="Lifelong paramedic and public safety professional, answering a new call to serve District 121 in Harrisburg." />
+  <meta property="og:title" content="Michael J. Stadulis | District 121" />
+  <meta property="og:description" content="Leadership rooted in public service." />
   <meta property="og:type" content="website" />
-  <!-- Put your image at scooby.jpg -->
   <meta property="og:image" content="scooby.jpg" />
-  <meta property="og:image:type" content="image/jpeg" />
 
   <style>
     :root{
-      --bg:#071423;
-      --card:#0b1f3a;
-      --text:#f3f6fb;
-      --muted:#c8d4ea;
-      --accent:#e31b23;
-      --accent2:#1f5fbf;
-      --line:rgba(255,255,255,.12);
-      --shadow: 0 18px 60px rgba(0,0,0,.35);
-      --radius: 18px;
-      --max: 1140px;
-      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --bg1:#dff1ff;
+      --bg2:#cfe8ff;
+      --bg3:#edf7ff;
+      --card:rgba(255,255,255,.72);
+      --text:#17324d;
+      --muted:#4d6983;
+      --line:rgba(23,50,77,.14);
+      --accent:#c81922;
+      --accent2:#245da6;
+      --navy:#0b1f4d;
+      --navy-soft:#132d66;
+      --shadow:0 18px 40px rgba(34,78,120,.10);
+      --shadow-soft:0 10px 24px rgba(34,78,120,.08);
+      --max:1120px;
+      --font:"Trebuchet MS", "Segoe UI", Arial, sans-serif;
     }
+
     *{box-sizing:border-box}
-    html,body{margin:0; padding:0; font-family:var(--font); color:var(--text); background:
-      radial-gradient(1000px 700px at 20% 10%, rgba(31,95,191,.28), transparent 60%),
-      radial-gradient(900px 700px at 80% 20%, rgba(227,27,35,.25), transparent 55%),
-      linear-gradient(180deg, #06111f, #06111f 35%, #070f1a);
-    }
-    a{color:inherit; text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
 
-    /* Buttons */
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:12px 16px; border-radius:999px;
+    html, body{
+      margin:0;
+      padding:0;
+      font-family:var(--font);
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,.82), transparent 34%),
+        linear-gradient(180deg, var(--bg1), var(--bg2) 50%, var(--bg3));
+      font-size:16px;
+      line-height:1.55;
+    }
+
+    body{
+      min-height:100vh;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 18px;
+    }
+
+    .glass{
+      background:var(--card);
       border:1px solid var(--line);
-      background:rgba(255,255,255,.06);
-      color:var(--text); font-weight:900; letter-spacing:.2px;
-      transition:.18s ease; cursor:pointer;
-      box-shadow: 0 6px 18px rgba(0,0,0,.18);
-      user-select:none;
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+      box-shadow:var(--shadow);
+      border-radius:20px;
+      transition:transform .22s ease, box-shadow .22s ease, background .22s ease;
+    }
+
+    .glass:hover{
+      transform:translateY(-3px);
+      box-shadow:0 22px 46px rgba(34,78,120,.14);
+    }
+
+    .district-strip{
+      overflow:hidden;
       white-space:nowrap;
+      border-top:1px solid rgba(23,50,77,.08);
+      border-bottom:1px solid rgba(23,50,77,.08);
+      background:rgba(255,255,255,.48);
     }
-    .btn:hover{transform: translateY(-1px); background:rgba(255,255,255,.10)}
-    .btn:active{transform: translateY(0px)}
-    .btn.primary{background:linear-gradient(135deg, var(--accent), #ff4a52); border:none}
-    .btn.blue{background:linear-gradient(135deg, var(--accent2), #5aa0ff); border:none}
-    .tag{
-      display:inline-flex; align-items:center;
-      padding:7px 12px; border-radius:999px;
+
+    .district-track{
+      display:flex;
+      width:max-content;
+      animation:scrollDistrict 60s linear infinite;
+      padding:12px 0;
+    }
+
+    .district-text{
+      font-weight:800;
+      font-size:.95rem;
+      letter-spacing:.08em;
+      color:#143455;
+      text-transform:uppercase;
+      padding-right:42px;
+    }
+
+    @keyframes scrollDistrict{
+      from{transform:translateX(0);}
+      to{transform:translateX(-50%);}
+    }
+
+    .top-banner-wrap{
+      padding:12px 0 0;
+    }
+
+    .top-banner{
+      background:linear-gradient(135deg, #1b4e86, #2d67b2, #c81922);
+      color:#fff;
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      padding:12px 18px;
+    }
+
+    .banner-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      min-height:56px;
+    }
+
+    .brand{
+      font-weight:900;
+      font-size:1rem;
+      white-space:nowrap;
+      letter-spacing:.02em;
+    }
+
+    .banner-nav{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:10px;
+      flex:1;
+      flex-wrap:nowrap;
+    }
+
+    .banner-nav a{
+      color:#fff;
+      font-weight:800;
+      font-size:.9rem;
+      padding:8px 10px;
+      border-radius:12px;
+      transition:.22s ease;
+      white-space:nowrap;
+      letter-spacing:.01em;
+    }
+
+    .banner-nav a:hover,
+    .banner-nav a.active{
+      background:rgba(255,255,255,.18);
+      transform:translateY(-1px);
+    }
+
+    .empty-side{
+      width:190px;
+      flex-shrink:0;
+    }
+
+    .site-main{
+      padding:20px 0 24px;
+    }
+
+    .page{
+      display:none;
+      min-height:calc(100vh - 240px);
+      animation:fadeIn .28s ease;
+    }
+
+    .page.active{
+      display:block;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(6px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    .hero-card{
+      padding:20px;
+    }
+
+    .hero-title{
+      text-align:center;
+      margin:0 0 16px;
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(2rem, 4.5vw, 3.2rem);
+      line-height:1.1;
+      letter-spacing:-.02em;
+      font-weight:900;
+    }
+
+    .hero-photo{
+      overflow:hidden;
+      border-radius:22px;
       border:1px solid var(--line);
-      background:rgba(255,255,255,.06);
+      background:rgba(255,255,255,.56);
+      position:relative;
+      height:680px;
+      max-width:760px;
+      margin:0 auto;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .hero-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center 18%;
+      transition:transform .35s ease;
+    }
+
+    .hero-photo:hover img{
+      transform:scale(1.02);
+    }
+
+ 	.endorsement-grid{
+ 	 display:grid;
+  	grid-template-columns:repeat(2, 280px);
+  	justify-content:center;
+  	gap:20px;
+  	margin-top:16px;
+    }
+
+    .endorsement-card{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      padding:14px;
+      border-radius:20px;
+      background:rgba(255,255,255,.82);
+      border:1px solid rgba(23,50,77,.10);
+      box-shadow:var(--shadow-soft);
+      text-align:center;
+    }
+
+    .endorsement-media{
+      width:100%;
+      aspect-ratio:4/4.5;
+      overflow:hidden;
+      border-radius:16px;
+      border:1px solid rgba(23,50,77,.12);
+      background:rgba(240,246,255,.9);
+    }
+
+    .endorsement-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .endorsement-card p{
+      margin:0;
       color:var(--muted);
-      font-weight:800; font-size:13px;
+      font-size:.98rem;
+      line-height:1.55;
+      display:flex;
+      align-items:center;
+      justify-content:ceనter;
+      min-height:88px;
     }
 
-    /* Header */
-    header{
-      position:sticky; top:0; z-index:50;
-      backdrop-filter: blur(10px);
-      background:rgba(6,17,31,.72);
-      border-bottom:1px solid var(--line);
+    .page-card{
+      padding:22px;
     }
-    .topbar{display:flex; align-items:center; justify-content:space-between; padding:12px 0; gap:14px}
-    .brand{display:flex; flex-direction:column; line-height:1.05}
-    .brand strong{font-size:16px; letter-spacing:.2px}
-    .brand span{font-size:12.5px; color:var(--muted)}
-    nav{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
-    nav a{color:var(--muted); font-weight:900; font-size:13px; padding:10px 10px; border-radius:10px}
-    nav a:hover{color:var(--text); background:rgba(255,255,255,.06)}
-    .actions{display:flex; gap:10px; align-items:center}
-    .menuBtn{display:none}
-    .mobileNav{display:none; padding:10px 0 14px; border-top:1px solid var(--line)}
-    .mobileNav a{display:block; padding:12px 10px; border-radius:10px; color:var(--muted); font-weight:900}
-    .mobileNav a:hover{background:rgba(255,255,255,.06); color:var(--text)}
 
-    /* Hero */
-    .hero{padding:44px 0 28px}
-    .heroGrid{
+    .patriotic-bg{
+      position:relative;
+      overflow:hidden;
+      isolation:isolate;
+      background:linear-gradient(135deg, rgba(255,255,255,.82), rgba(255,255,255,.74));
+    }
+
+    .patriotic-bg::before{
+      content:"";
+      position:absolute;
+      inset:-8%;
+      background:
+        radial-gradient(ellipse at 10% 20%, rgba(28,79,150,.34) 0%, transparent 34%),
+        radial-gradient(ellipse at 85% 10%, rgba(200,25,34,.30) 0%, transparent 36%),
+        radial-gradient(ellipse at 30% 85%, rgba(200,25,34,.24) 0%, transparent 33%),
+        radial-gradient(ellipse at 85% 75%, rgba(36,93,166,.26) 0%, transparent 34%),
+        linear-gradient(125deg,
+          rgba(36,93,166,.18) 0%,
+          rgba(255,255,255,0) 28%,
+          rgba(200,25,34,.14) 54%,
+          rgba(255,255,255,0) 76%,
+          rgba(36,93,166,.16) 100%);
+      filter:blur(10px) saturate(115%);
+      transform:scale(1.05);
+      z-index:-3;
+      pointer-events:none;
+    }
+
+    .patriotic-bg::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(115deg, rgba(255,255,255,.05) 0%, rgba(255,255,255,.40) 24%, rgba(255,255,255,.12) 42%, rgba(255,255,255,.36) 60%, rgba(255,255,255,.08) 100%),
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,.16), transparent 58%);
+      mix-blend-mode:screen;
+      z-index:-2;
+      pointer-events:none;
+    }
+
+    .patriotic-bg .glass.about-text-card,
+    .patriotic-bg .glass.event-card,
+    .patriotic-bg .about-photo,
+    .patriotic-bg .about-vision,
+    .patriotic-bg .mission-card,
+    .patriotic-bg .mission-donate{
+      background:rgba(255,255,255,.80);
+      border:1px solid rgba(23,50,77,.12);
+      box-shadow:0 14px 32px rgba(34,78,120,.10);
+    }
+
+    .page-title{
+      margin:0 0 10px;
+      text-align:center;
+      font-size:2.3rem;
+      line-height:1.1;
+      font-weight:900;
+      letter-spacing:-.02em;
+    }
+
+    .page-subtitle{
+      max-width:760px;
+      margin:0 auto 22px;
+      text-align:center;
+      color:var(--muted);
+      font-size:1.1rem;
+    }
+
+    .btn-row{
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:20px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:11px 18px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.82);
+      color:var(--text);
+      font-weight:800;
+      font-size:.95rem;
+      cursor:pointer;
+      transition:transform .22s ease, background .22s ease, box-shadow .22s ease;
+      box-shadow:0 6px 14px rgba(34,78,120,.06);
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.96);
+      box-shadow:0 12px 20px rgba(34,78,120,.12);
+    }
+
+    .btn.primary{
+      background:linear-gradient(135deg, var(--accent), #ef4d52);
+      color:#fff;
+      border:none;
+    }
+
+    form{
       display:grid;
-      grid-template-columns: 1.35fr .65fr;
+      gap:10px;
+    }
+
+    input, textarea{
+      width:100%;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.88);
+      padding:13px 14px;
+      font:inherit;
+      color:var(--text);
+      outline:none;
+      transition:border-color .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    input:focus, textarea:focus{
+      border-color:rgba(36,93,166,.4);
+      box-shadow:0 0 0 4px rgba(36,93,166,.10);
+      background:#fff;
+    }
+
+    .event-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:16px;
+      margin-top:14px;
+      align-items:stretch;
+    }
+
+    .event-card{
+      padding:16px;
+      display:flex;
+      flex-direction:column;
+      height:100%;
+    }
+
+    .event-card h3{
+      margin:0 0 12px;
+      text-align:center;
+      font-size:1.18rem;
+      min-height:56px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .event-image-wrap{
+      width:100%;
+      aspect-ratio:1/1;
+      overflow:hidden;
+      border-radius:18px;
+      border:1px solid rgba(23,50,77,.12);
+      box-shadow:var(--shadow-soft);
+      background:#eef5ff;
+    }
+
+    .event-image{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      margin-top:0;
+      border:none;
+      box-shadow:none;
+      border-radius:0;
+    }
+
+    .scroll-gallery{
+      position:relative;
+      margin-top:12px;
+      overflow:hidden;
+      border-radius:18px;
+    }
+
+    .scroll-track{
+      display:flex;
+      overflow-x:auto;
+      gap:10px;
+      scroll-snap-type:x mandatory;
+      padding-bottom:6px;
+      scrollbar-width:thin;
+      scrollbar-color:rgba(36,93,166,.35) rgba(255,255,255,.45);
+    }
+
+    .scroll-track::-webkit-scrollbar{
+      height:8px;
+    }
+
+    .scroll-track::-webkit-scrollbar-track{
+      background:rgba(255,255,255,.45);
+      border-radius:999px;
+    }
+
+    .scroll-track::-webkit-scrollbar-thumb{
+      background:rgba(36,93,166,.35);
+      border-radius:999px;
+    }
+
+    .scroll-slide{
+      min-width:100%;
+      scroll-snap-align:start;
+      flex:0 0 100%;
+    }
+
+    .scroll-slide img{
+      width:100%;
+      aspect-ratio:16/12;
+      object-fit:cover;
+      border-radius:18px;
+      border:1px solid rgba(23,50,77,.12);
+      box-shadow:var(--shadow-soft);
+    }
+
+    .contact-layout{
+      display:grid;
+      grid-template-columns:1fr 1fr;
       gap:14px;
       align-items:stretch;
     }
-    .panel{
+
+    .contact-bubble{
+      padding:22px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      min-height:220px;
+    }
+
+    .social-bubble{
+      padding:22px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      min-height:220px;
+      text-align:center;
+    }
+
+    .facebook-image-link{
+      display:block;
+      width:100%;
+      max-width:150px;
+      margin:10px auto 0;
+      transition:transform .22s ease;
+    }
+
+    .facebook-image-link:hover{
+      transform:translateY(-2px) scale(1.02);
+    }
+
+    .facebook-image{
+      width:100%;
+      border-radius:16px;
       border:1px solid var(--line);
-      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
-      border-radius:var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      position:relative;
+      box-shadow:var(--shadow);
     }
-    .panel .inner{padding:24px}
 
-    .headline{font-size:42px; line-height:1.06; margin:10px 0 12px; letter-spacing:-.6px}
-    .sub{color:var(--muted); font-size:16px; line-height:1.65; margin:0 0 18px; max-width:70ch}
-    .heroMeta{display:flex; flex-wrap:wrap; gap:10px; margin:12px 0 16px}
-    .ctaRow{display:flex; flex-wrap:wrap; gap:10px}
-
-    /* Image */
-    .photo{
-      height: 560px;
-      border-top:1px solid var(--line);
-      overflow:hidden;
-      position:relative;
-      background: rgba(255,255,255,.04);
+    .about-mosaic{
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:16px;
+      margin-top:16px;
+      align-items:stretch;
     }
-    .photo img{
+
+    .about-top-split{
+      display:grid;
+      grid-template-columns:1.05fr 1.2fr;
+      gap:16px;
+      align-items:stretch;
+      margin-top:10px;
+    }
+
+    .about-top-split-reverse{
+      display:grid;
+      grid-template-columns:1.2fr 1.05fr;
+      gap:16px;
+      align-items:stretch;
+      margin-top:16px;
+    }
+
+    .about-text-card{
+      padding:24px;
+    }
+
+    .about-text-card h3{
+      margin:0 0 12px;
+      font-size:1.5rem;
+      color:#153f73;
+      line-height:1.2;
+      font-weight:900;
+    }
+
+    .about-text-card p{
+      margin:0 0 14px;
+      color:var(--muted);
+      font-size:1.04rem;
+    }
+
+    .about-text-card p:last-child{
+      margin-bottom:0;
+    }
+
+    .about-photo{
+      overflow:hidden;
+      border-radius:20px;
+      border:1px solid rgba(23,50,77,.12);
+      background:rgba(255,255,255,.8);
+      box-shadow:var(--shadow-soft);
+      min-height:220px;
+    }
+
+    .about-photo img{
       width:100%;
       height:100%;
-      object-fit: cover;
-      object-position: 50% 18%;
-      display:block;
-      filter: contrast(1.05) saturate(1.05);
-      transform: scale(1.02);
-    }
-    .photo::after{
-      content:"";
-      position:absolute; inset:0;
-      background:
-        linear-gradient(135deg, rgba(227,27,35,.22), rgba(31,95,191,.18)),
-        radial-gradient(600px 220px at 50% 12%, rgba(255,255,255,.10), transparent 65%),
-        linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.30));
-      pointer-events:none;
-    }
-    .photoBadge{
-      position:absolute; left:14px; bottom:14px; z-index:2;
-      padding:8px 12px; border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(6,17,31,.55);
-      backdrop-filter: blur(8px);
-      font-weight:900; font-size:12.5px; letter-spacing:.2px;
+      object-fit:cover;
     }
 
-    /* Sections */
-    section{padding:22px 0}
-    .sectionTitle{display:flex; align-items:flex-end; justify-content:space-between; gap:10px; margin:0 0 12px}
-    .sectionTitle h2{margin:0; font-size:22px; letter-spacing:-.2px}
-    .sectionTitle p{margin:0; color:var(--muted); font-weight:900; font-size:13px}
-
-    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:12px}
-    .grid2{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
-    .split{display:grid; grid-template-columns: 1fr 1fr; gap:12px; align-items:stretch}
-
-    .card{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.05);
-      border-radius:var(--radius);
-      padding:18px;
+    .about-photo-two{
+      min-height:420px;
+      background:rgba(255,255,255,.92);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px;
     }
-    .card h3{margin:0 0 8px; font-size:16px}
-    .card p{margin:0; color:var(--muted); line-height:1.65; font-size:14px}
-    .list{margin:10px 0 0; padding:0 0 0 18px; color:var(--muted); line-height:1.75; font-size:14px}
 
-    .quote{
-      font-size:15px; line-height:1.7; color:var(--text);
-      border-left:3px solid rgba(255,255,255,.22);
-      padding-left:14px; margin:0;
-    }
-    .quote span{display:block; margin-top:8px; color:var(--muted); font-weight:900; font-size:13px}
-
-    /* Forms */
-    form{display:grid; gap:10px; margin-top:10px}
-    input, textarea{
+    .about-photo-two img{
       width:100%;
-      padding:12px 12px;
-      border-radius:12px;
-      border:1px solid var(--line);
-      background:rgba(0,0,0,.25);
-      color:var(--text);
-      outline:none;
+      height:100%;
+      object-fit:contain;
+      object-position:center;
     }
-    input::placeholder, textarea::placeholder{color:rgba(200,212,234,.7)}
-    textarea{min-height:110px; resize:vertical}
 
-    /* Footer */
-    footer{
-      padding:18px 0 26px;
-      border-top:1px solid var(--line);
-      margin-top:22px;
+    .about-row-full{
+      display:grid;
+      grid-template-columns:1.15fr 1.15fr;
+      gap:16px;
+      margin-top:16px;
+      align-items:stretch;
+    }
+
+    .about-vision{
+      margin:26px 0;
+      text-align:center;
+      padding:24px 18px;
+      border-radius:22px;
+      background:linear-gradient(135deg, rgba(212,233,255,.95), rgba(236,245,255,.95));
+      border:1px solid rgba(36,93,166,.16);
+      box-shadow:var(--shadow-soft);
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .about-vision-title{
+      font-size:1.45rem;
+      font-weight:900;
+      color:#245da6;
+      margin-bottom:12px;
+    }
+
+    .about-vision-text{
+      max-width:860px;
+      margin:0 auto;
+      color:#245da6;
+      font-size:1.06rem;
+      line-height:1.8;
+      font-weight:700;
+    }
+
+    .about-bottom-note{
+      text-align:center;
+      margin-top:18px;
+      background:linear-gradient(135deg, var(--navy), var(--navy-soft));
+      color:#fff;
+      padding:26px 22px;
+      border-radius:22px;
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:0 16px 32px rgba(11,31,77,.26);
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .about-bottom-note .quote{
+      margin:0 0 16px;
+      font-size:1.3rem;
+      font-weight:900;
+      color:#fff;
+      line-height:1.5;
+    }
+
+    .about-bottom-note .vote{
+      margin:0 0 12px;
+      font-size:1.08rem;
+      color:#dfe8ff;
+      font-weight:700;
+    }
+
+    .about-bottom-note .platform-note{
+      margin:0;
+      font-size:1rem;
+      color:#c9d8ff;
+    }
+
+    .platform-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:16px;
+      margin-top:18px;
+    }
+
+    .platform-card{
+      position:relative;
+      padding:22px 20px 20px;
+      border-radius:22px;
+      background:rgba(255,255,255,.86);
+      border:1px solid rgba(23,50,77,.10);
+      box-shadow:0 14px 30px rgba(34,78,120,.10);
+      overflow:hidden;
+    }
+
+    .platform-card::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      height:6px;
+      background:linear-gradient(90deg, #245da6, #c81922);
+    }
+
+    .platform-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:12px;
+    }
+
+    .platform-icon-number{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .platform-number{
+      width:54px;
+      height:54px;
+      min-width:54px;
+      border-radius:16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.25rem;
+      font-weight:900;
+      color:#fff;
+      background:linear-gradient(135deg, #245da6, #c81922);
+      box-shadow:0 10px 18px rgba(36,93,166,.22);
+    }
+
+    .platform-heading{
+      flex:1;
+    }
+
+    .platform-heading h3{
+      margin:2px 0 8px;
+      font-size:1.35rem;
+      line-height:1.2;
+      font-weight:900;
+      color:#17324d;
+    }
+
+    .platform-card p{
+      margin:0;
       color:var(--muted);
-      font-size:12.5px;
-      line-height:1.6;
+      font-size:1.02rem;
+      line-height:1.75;
     }
-    .footGrid{display:grid; grid-template-columns: 1.5fr .5fr; gap:12px; align-items:start}
-    .divider{height:12px}
 
-    /* Responsive */
+    .mission-donate{
+      padding:22px;
+      border-radius:24px;
+      margin-bottom:18px;
+      position:relative;
+      overflow:hidden;
+      background:linear-gradient(135deg, rgba(255,255,255,.92), rgba(247,250,255,.88));
+      border:1px solid rgba(23,50,77,.10);
+      box-shadow:0 16px 30px rgba(34,78,120,.08);
+    }
+
+    .mission-donate::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      height:6px;
+      background:linear-gradient(90deg, #245da6, #c81922);
+    }
+
+    .mission-donate-head{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      margin-bottom:14px;
+    }
+
+    .mission-icon{
+      width:58px;
+      height:58px;
+      min-width:58px;
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.5rem;
+      background:linear-gradient(135deg, rgba(36,93,166,.12), rgba(200,25,34,.12));
+      border:1px solid rgba(36,93,166,.14);
+      box-shadow:0 8px 18px rgba(34,78,120,.08);
+    }
+
+    .mission-donate h3{
+      margin:0 0 4px;
+      font-size:1.5rem;
+      line-height:1.2;
+      font-weight:900;
+    }
+
+    .mission-address{
+      margin-top:14px;
+      padding:16px 18px;
+      border-radius:18px;
+      background:rgba(36,93,166,.06);
+      border:1px solid rgba(36,93,166,.10);
+      color:#17324d;
+      font-weight:800;
+      line-height:1.8;
+    }
+
+    .mission-support-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:16px;
+      margin-top:10px;
+    }
+
+    .mission-card{
+      position:relative;
+      padding:22px 20px 20px;
+      border-radius:22px;
+      background:rgba(255,255,255,.86);
+      border:1px solid rgba(23,50,77,.10);
+      box-shadow:0 14px 30px rgba(34,78,120,.10);
+      overflow:hidden;
+    }
+
+    .mission-card::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      height:6px;
+      background:linear-gradient(90deg, #245da6, #c81922);
+    }
+
+    .mission-card-head{
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+      margin-bottom:12px;
+    }
+
+    .mission-card h3{
+      margin:2px 0 6px;
+      font-size:1.3rem;
+      line-height:1.2;
+      font-weight:900;
+      color:#17324d;
+    }
+
+    footer{
+      padding:8px 0 28px;
+    }
+
+    .footer-box{
+      padding:20px;
+      text-align:center;
+      color:var(--muted);
+      font-size:.95rem;
+      line-height:1.7;
+    }
+
+    .footer-box strong{
+      color:var(--text);
+    }
+
+    @media (max-width: 1100px){
+      .banner-nav{
+        flex-wrap:wrap;
+      }
+
+      .empty-side{
+        width:100px;
+        flex-shrink:0;
+      }
+    }
+
     @media (max-width: 980px){
-      .heroGrid{grid-template-columns:1fr}
-      .headline{font-size:36px}
-      nav{display:none}
-      .menuBtn{display:inline-flex}
-      .grid3{grid-template-columns:1fr}
-      .grid2,.split{grid-template-columns:1fr}
-      .footGrid{grid-template-columns:1fr}
-      .photo{height: 340px}
-    }
-    @media (max-width: 520px){
-      .headline{font-size:32px}
-      .photo{height: 300px}
-    }
-    /* Facebook Light Button */
-.facebook-light-btn {
-  display: inline-block;
-  background-color: #d3d3d3;
-  color: #000;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 700;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
-}
+      .banner-inner{
+        flex-direction:column;
+        justify-content:center;
+      }
 
-.facebook-light-btn:hover {
-  background-color: #bfbfbf;
-}
+      .empty-side{
+        display:none;
+      }
+
+      .brand{
+        text-align:center;
+      }
+
+      .event-grid,
+      .contact-layout,
+      .about-mosaic,
+      .about-row-full,
+      .about-top-split,
+      .about-top-split-reverse,
+      .platform-grid,
+      .mission-support-grid,
+      .endorsement-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-photo{
+        height:520px;
+        max-width:620px;
+      }
+
+      .banner-nav{
+        gap:8px;
+        flex-wrap:wrap;
+      }
+
+      .banner-nav a{
+        font-size:.86rem;
+      }
+
+      .about-photo{
+        min-height:260px;
+      }
+
+      .about-photo-two{
+        min-height:340px;
+      }
+
+      .platform-top,
+      .mission-donate-head{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .mission-card[style]{
+        grid-column:auto !important;
+      }
+
+      .endorsement-card p,
+      .event-card h3{
+        min-height:auto;
+      }
+    }
+
+    @media (max-width: 640px){
+      html, body{
+        font-size:15px;
+      }
+
+      .top-banner{
+        padding:14px 12px;
+      }
+
+      .banner-nav{
+        gap:5px;
+      }
+
+      .banner-nav a{
+        font-size:.78rem;
+        padding:6px 7px;
+      }
+
+      .hero-card,
+      .page-card,
+      .event-card,
+      .footer-box,
+      .contact-bubble,
+      .social-bubble,
+      .about-text-card,
+      .about-bottom-note{
+        padding:16px;
+      }
+
+      .hero-photo{
+        height:380px;
+      }
+
+      .page-title{
+        font-size:1.9rem;
+      }
+
+      .facebook-image-link{
+        max-width:120px;
+      }
+
+      .about-photo{
+        min-height:220px;
+      }
+
+      .about-photo-two{
+        min-height:280px;
+        padding:8px;
+      }
+    }
   </style>
 </head>
-
 <body>
-  <header>
+
+  <div class="district-strip" aria-label="District 121 communities">
+    <div class="district-track">
+      <div class="district-text">
+        DISTRICT 121 • BEAR CREEK TOWNSHIP • PLAINS TOWNSHIP • BEAR CREEK VILLAGE • WILKES-BARRE CITY • BUCK TOWNSHIP • WILKES-BARRE TOWNSHIP • LAUREL RUN •
+      </div>
+      <div class="district-text">
+        DISTRICT 121 • BEAR CREEK TOWNSHIP • PLAINS TOWNSHIP • BEAR CREEK VILLAGE • WILKES-BARRE CITY • BUCK TOWNSHIP • WILKES-BARRE TOWNSHIP • LAUREL RUN •
+      </div>
+    </div>
+  </div>
+
+  <div class="top-banner-wrap">
     <div class="wrap">
-      <div class="topbar">
-        <a class="brand" href="#top" aria-label="Home">
-          <strong>Michael J. Stadulis</strong>
-          <span>PA State Representative • District 121</span>
-        </a>
+      <div class="top-banner">
+        <div class="banner-inner">
+          <div class="brand">Michael J. Stadulis • District 121</div>
 
-        <nav aria-label="Primary">
-          <a href="#about">About</a>
-          <a href="#priorities">Priorities</a>
-          <a href="#getinvolved">Get Involved</a>
-          <a href="#contact">Contact</a>
-        </nav>
+          <nav class="banner-nav" aria-label="Primary">
+            <a href="#about">About</a>
+            <a href="#platform">Platform</a>
+            <a href="#upcomingevents">Upcoming Events</a>
+            <a href="#joinourmission">Join Our Mission</a>
+            <a href="#contact">Contact</a>
+          </nav>
 
-        <div class="actions">
-          <a class="btn blue" href="#getinvolved">Volunteer</a>
-                  <a class="btn primary" href="#" onclick="alert('Checks can be sent to Friends of Michael J Stadulis P.O. Box 1724, Plains Twp., PA 18705. Thank you for your donation!'); return false;">Donate Now</a>              
-          <button class="btn menuBtn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menu</button>
+          <div class="empty-side"></div>
         </div>
-      </div>
-
-      <div class="mobileNav" id="mobileNav" aria-label="Mobile navigation">
-        <a href="#about">About</a>
-        <a href="#priorities">Priorities</a>
-        <a href="#getinvolved">Get Involved</a>
-        <a href="#contact">Contact</a>
       </div>
     </div>
-  </header>
+  </div>
 
-  <main id="top">
-    <!-- HERO -->
-    <div class="hero">
-      <div class="wrap">
-        <div class="heroGrid">
-          <div class="panel">
-            <div class="inner">
-              <span class="tag">Answering the Call • District 121</span>
-              <h1 class="headline">Leadership rooted in public service.</h1>
+  <main class="site-main">
+    <div class="wrap">
 
-              <p class="sub">
-                For over three decades, Michael J. Stadulis "Scooby" has responded to thousands of emergency medical service calls
-                across District 121, serving as a paramedic, public safety professional, dedicated volunteer, a friend and neighbor.
-                Now, he’s stepping forward in a new way to ensure District 121 is heard, respected, and prioritized in Harrisburg.
-              </p>
-
-              <div class="heroMeta">
-                <span class="tag">Working Families</span>
-                <span class="tag">Public Safety</span>
-                <span class="tag">Healthcare</span>
-                <span class="tag">Education & Infrastructure</span>
-              </div>
-
-              <div class="ctaRow" style="margin-top:6px">
-                <a class="btn blue" href="#getinvolved">Join the Campaign</a>
-                  <a class="btn primary" href="#" onclick="alert('Checks can be sent to Friends of Michael J Stadulis P.O. Box 1724, Plains Twp., PA 18705. Thank you for your donation!'); return false;">Donate Now</a>              
-               <a class="btn" href="#" onclick="alert('Please fill out the Contact form. We will email you about inquiries.'); return false;">Request a Yard Sign</a>              </div>
-            </div>
-
-            <div class="photo">
-              <img src="scooby.jpg" alt="Michael J. Stadulis" />
-              <div class="photoBadge">District 121 • Pennsylvania</div>
-            </div>
+      <section class="page active" id="home">
+        <div class="glass hero-card">
+          <div class="hero-title">
+            <h1>Michael J. Stadulis</h1>
           </div>
 
-          <div class="panel" style="background:linear-gradient(180deg, rgba(31,95,191,.22), rgba(255,255,255,.04))">
-            <div class="inner">
-              <h3 style="margin:0 0 6px; font-size:16px">“It’s time to answer the call.”</h3>
-              <p style="margin:0 0 12px; color:var(--muted); line-height:1.6; font-size:14px">
-                Public service isn’t just a slogan — it’s been my life. All people deserve leadership that shows up consistently,
-                not only during emergencies, but every single day.
-              </p>
-
-              <p class="quote">
-                I’m not a career politician. I’m a lifelong resident and public servant within this district.
-                <span>— Michael J. Stadulis</span>
-              </p/>
-
-              </div>
-
-              <div class="divider"></div>
-
-              <div class="card" style="background:rgba(255,255,255,.04)">
-                <h3 style="margin-bottom:6px">Campaign Contact</h3>
-                <p style="margin:0; color:var(--muted); font-size:13px; line-height:1.7">
-                  <strong>Email:</strong> michaeljstadulisforstaterep@gmail.com<br />
-                  <strong>Phone:</strong> (570)332-6979
-                </p>
-              </div>
-            </div>
+          <div class="hero-photo">
+            <img src="scooby.jpg" alt="Michael J. Stadulis" />
           </div>
-        </div><!-- /heroGrid -->
+
+ <div style="margin-top:22px;">
+  <h2 class="page-title">Endorsements</h2>
+
+  <div class="endorsement-grid">
+
+    <div class="endorsement-card">
+      <div class="endorsement-media">
+        <img src="E1.jpeg" alt="Endorsement 1" />
       </div>
+      <p>
+        Wilkes-Barre Area School Board Member Denise Thomas and Former Wilkes-Barre City Councilman John Marconi
+      </p>
     </div>
 
-    <!-- ABOUT -->
-    <section id="about">
-      <div class="wrap">
-        <div class="sectionTitle">
-          <h2>Meet Michael J. Stadulis</h2>
-          <p>Candidate • Pennsylvania State Representative • District 121</p>
-        </div>
-
-        <div class="split">
-          <div class="card">
-            <h3>Service That Started Early</h3>
-            <p>
-              Michael began serving in 1986 at the age of 14 through an observer program at Plains Volunteer Ambulance Association Medic 2,
-              building a lifelong commitment to social responsibility and community service.
-            </p>
-            <ul class="list">
-              <li>Graduate of James M. Coughlin High School</li>
-              <li>Luzerne County Community College paramedic curriculum</li>
-              <li>Decades of hands-on public service in District 121</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Public Safety & Union Leadership</h3>
-            <p>
-              Michael served with Mercy Hospital Medic 301, Geisinger Medic 303, Spellman Ambulance Medic 8, Hanover Twp. Medic 9,
-              and the Wilkes-Barre Fire Department on Medic 3 and 5 — including service as Chief Paramedic during the last 7 of his 25 years.
-            </p>
-            <p style="margin-top:10px">
-              As a strong union advocate and champion for employee rights, he served as a Union Steward with LIUNA Laborers Local 1310.
-            </p>
-          </div>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="card">
-          <h3>Rooted in the Community</h3>
-          <p>
-            Michael and his wife Renee reside in the city of Wilkes-Barre and raised their son and daughter here.
-            As a family, they are proud to call St. Robert Bellarmine at St. Aloysius their parish home,
-            where they actively practice their Catholic faith and participate in church community fundraising.
-          </p>
-        </div>
+    <div class="endorsement-card">
+      <div class="endorsement-media">
+        <img src="E2.jpg" alt="Endorsement 2" />
       </div>
-    </section>
+      <p>
+        Wilkes-Barre Area School Board Member and Geisinger Director of Diversity and Inclusion Instructor Arthur Breese
+      </p>
+    </div>
 
-    <!-- PRIORITIES -->
-    <section id="priorities">
-      <div class="wrap">
-        <div class="sectionTitle">
-          <h2>Priorities</h2>
-          <p>Focused on what District 121 is living every day</p>
-        </div>
-
-        <div class="grid3">
-          <div class="card">
-            <h3>Working Families</h3>
-            <p>
-              Today, most working families must work more than two full-time jobs within a household
-              just to be able to provide for their families and keep up with the rising cost of living.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Public Safety</h3>
-            <p>
-              Public safety resources are strained. District 121 deserves leadership that supports first responders
-              and ensures communities have the resources to stay safe.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Healthcare & Prescriptions</h3>
-            <p>
-              Healthcare and prescription costs continue to rise. Families deserve affordable, reliable access to care.
-            </p>
-          </div>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="grid2">
-          <div class="card">
-            <h3>Utilities & Fees</h3>
-            <p>
-              Utility bills keep increasing with added fees. Families should not be punished by constant increases and new charges.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Infrastructure & Education</h3>
-            <p>
-              Our area’s aging infrastructure demands attention, and school safety and security programs must remain a top priority.
-              We must also advocate for positive education policy upgrades that strengthen opportunities for our students and families.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- GET INVOLVED -->
-    <section id="getinvolved">
-      <div class="wrap">
-        <div class="sectionTitle">
-          <h2>Get Involved</h2>
-          <p>This campaign is powered by neighbors like you</p>
-        </div>
-
-        <div class="grid2">
-          <div class="card">
-            <h3>Volunteer</h3>
-            <p>Knock on doors, make calls, help with events, or support Election Day efforts.</p>
-
-            <form onsubmit="return openMailto('volunteer')">
-              <input id="v_name" type="text" placeholder="Full name" required />
-              <input id="v_email" type="email" placeholder="Email" required />
-              <input id="v_phone" type="tel" placeholder="Phone (optional)" />
-              <textarea id="v_msg" placeholder="How would you like to help? (doors, phones, yard signs, events)"></textarea>
-              <button class="btn blue" type="submit">Volunteer</button>
-            </form>
-          </div>
-
-          <div class="card" id="donate">
-            <h3>Donate</h3>
-            <p>Help us reach voters, print materials, and build a campaign that wins for District 121.</p>
-            <h3>PO Box</h3>
-            <p>Friends of Michael J Stadulis 
-              P.O. Box 1724
-              Plains Twp., PA 18705.</p>
-
-            <div style="display:flex; flex-wrap:wrap; gap:10px; margin:12px 0 6px">
-              <!-- Replace # with your donation link -->
-                  <a class="btn primary" href="#" onclick="alert('Checks can be sent to Friends of Michael J Stadulis P.O. Box 1724, Plains Twp., PA 18705. Thank you for your donation!'); return false;">Donate Now</a>              
-            <a class="btn" href="#" onclick="alert('Please fill out the Contact form. We will email you about inquiries.'); return false;">Request a Yard Sign</a>            </div>
-
-            <p style="margin:8px 0 0; color:var(--muted); font-size:12.5px; line-height:1.6">
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <div class="wrap">
-        <div class="sectionTitle">
-          <h2>Contact</h2>
-          <p>Questions, support, or press inquiries</p>
-        </div>
-
-        <div class="grid2">
-          <div class="card">
-            <h3>Send a Message</h3>
-            <p>Send a note — we’ll get back to you as soon as possible.</p>
-
-            <form onsubmit="return openMailto('contact')">
-              <input id="c_name" type="text" placeholder="Full name" required />
-              <input id="c_email" type="email" placeholder="Email" required />
-              <input id="v_phone" type="tel" placeholder="Phone (optional)" />
-              <textarea id="c_msg" placeholder="Message" required></textarea>
-              <button class="btn" type="submit">Send</button>
-            </form>
-          </div>
-
-         <div class="card">
-  <h3>Stay Connected</h3>
-
-  <a class="facebook-light-btn"
-     href="https://www.facebook.com/share/17qeCiqTkZ/?mibextid=wwXIfr"
-     target="_blank">
-     Facebook Link
-  </a>
-
-  <div class="card" style="background:rgba(255,255,255,.04); margin-top:20px;">
-    <h3 style="margin-bottom:6px">Contact Information</h3>
-    <p style="margin-top:10px; color:var(--muted); font-size:13px; line-height:1.7;">
-      <strong>Email:</strong> michaeljstadulisforstaterep@gmail.com<br />
-      <strong>Phone:</strong> (570)332-6979<br />
-    </p>
   </div>
 </div>
+      </section>
 
-    <!-- FINAL CTA -->
-    <section>
-      <div class="wrap">
-        <div class="panel">
-          <div class="inner">
-            <h2 style="margin:0 0 8px; font-size:22px">It’s time for leadership rooted in public service.</h2>
-            <p class="sub" style="max-width:none; margin-bottom:14px">
-              Join us and help bring District 121 a strong voice in Harrisburg.
-            </p>
-            <div class="ctaRow">
-              <a class="btn blue" href="#getinvolved">Join the Campaign</a>
-                  <a class="btn primary" href="#" onclick="alert('Checks can be sent to Friends of Michael J Stadulis P.O. Box 1724, Plains Twp., PA 18705. Thank you for your donation!'); return false;">Donate Now</a>              
+      <section class="page" id="about">
+        <div class="glass page-card patriotic-bg">
+          <h2 class="page-title" style="font-size:clamp(2.2rem,4.6vw,3.25rem); margin-bottom:14px;">
+            Meet "Scooby": A Lifetime of Service to District 121
+          </h2>
+
+          <p class="page-subtitle" style="max-width:860px; margin-bottom:28px;"></p>
+
+          <div class="about-top-split">
+            <div class="about-photo glass" style="min-height:420px;">
+              <img src="AB1.jpg" alt="Scooby about photo 1" />
+            </div>
+
+            <div class="glass about-text-card" style="display:flex; flex-direction:column; justify-content:center;">
+              <h3>A Neighbor Who Shows Up</h3>
+              <p>
+                Most people in the 121st District don’t know him as Michael—they know him as "Scooby." That’s the kind of candidate Michael J. Stadulis is: the neighbor you’ve seen at the grocery store, the parish fundraiser, or perhaps, in your moment of greatest need, in the back of an ambulance.
+              </p>
+              <p>
+                Michael isn't just running for a seat in the Pennsylvania House of Representatives; he’s running to ensure that our community is never overlooked again. For Scooby, this campaign isn't about "politics as usual"—it’s about bringing an accountable, common-sense voice to Harrisburg that actually answers to the people.
+              </p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
+          <div class="about-top-split-reverse">
+            <div class="glass about-text-card" style="display:flex; flex-direction:column; justify-content:center;">
+              <h3>Service That Started Early</h3>
+              <p>
+                Michael’s commitment to social responsibility didn't start on a campaign trail; it started in 1986. At just 14 years old, he began serving as an observer at the Plains Volunteer Ambulance Association Medic 2. That early spark of service turned into a lifelong calling.
+              </p>
+              <p>
+                A proud graduate of James M. Coughlin High School, Michael stayed local, completing the paramedic curriculum at Luzerne County Community College. He didn't just learn about the problems facing our district; he spent decades working on the front lines of them.
+              </p>
+            </div>
+
+            <div class="about-photo glass about-photo-two">
+              <img src="AB2.jpg" alt="Scooby about photo 2" />
+            </div>
+          </div>
+
+          <div class="about-mosaic">
+            <div class="glass about-text-card" style="grid-column:span 2;">
+              <h3>25 Years on the Front Lines</h3>
+              <p>
+                For twenty-five years, Michael served our community as a paramedic. His career took him across every corner of the district, serving with:
+              </p>
+              <ul style="margin:0 0 14px 20px; color:var(--muted);">
+                <li>Mercy Hospital Medic 301</li>
+                <li>Geisinger Medic 303</li>
+                <li>Spellman Ambulance Medic 8</li>
+                <li>Hanover Twp. Medic 9</li>
+                <li>Wilkes-Barre Fire Department (Medic 3 and 5)</li>
+              </ul>
+              <p>
+                He spent his final seven years of service as Chief Paramedic, leading teams through the high-pressure reality of public safety. This experience gave him a unique perspective on our infrastructure—navigating crumbling roads and aging bridges where every second counts.
+              </p>
+              <p>
+                Michael is also a staunch advocate for workers' rights. As a Union Steward with LIUNA Laborers Local 1310, he has consistently fought for the fair treatment and safety of the employees who keep our world turning.
+              </p>
+            </div>
+
+            <div class="about-photo glass">
+              <img src="AB3.jpg" alt="Scooby about photo 3" />
+            </div>
+          </div>
+
+          <div class="about-mosaic">
+            <div class="glass about-text-card" style="grid-column:span 2;">
+              <h3>Rooted in Family and Faith</h3>
+              <p>
+                Michael and his wife, Renee, live in the City of Wilkes-Barre, where they raised their two children, Michael Jr. and Hope. The 121st isn't just a district on a map to them—it's home.
+              </p>
+              <p>
+                The Stadulis family are active members of St. Robert Bellarmine at St. Aloysius, their parish home. Whether they are practicing their Catholic faith or rolling up their sleeves for church community fundraisers, their roots in this community run deep.
+              </p>
+            </div>
+
+            <div class="about-photo glass">
+              <img src="AB4.jpg" alt="Scooby about photo 4" />
+            </div>
+          </div>
+
+          <div class="about-row-full">
+            <div class="about-photo glass">
+              <img src="AB5.jpg" alt="Scooby about photo 5" />
+            </div>
+
+            <div class="glass about-text-card">
+              <h3>Why He’s Running</h3>
+              <p>
+                Michael has seen the "impossible choices" his neighbors have to make: choosing between filling a grocery cart or keeping the lights on. He’s watched utility rate hikes squeeze seniors and working families while corporate profits soar.
+              </p>
+              <p>
+                His vision for Harrisburg is simple: restoring accountability, helping working families stay afloat, investing fairly in schools, and making sure first responders and communities have the support they deserve.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-row-full">
+            <div class="glass about-text-card">
+              <h3 style="color:#245da6;">Community, Service, and Leadership</h3>
+              <p>
+                Michael’s life has been rooted in answering the call, standing up for working families, and serving the people of District 121 with consistency, compassion, and accountability.
+              </p>
+            </div>
+
+            <div class="about-photo glass">
+              <img src="AB6.JPG" alt="Scooby about photo 6" />
+            </div>
+          </div>
+
+          <div class="about-row-full">
+            <div class="about-photo glass">
+              <img src="AB7.jpg" alt="Scooby about photo 7" />
+            </div>
+
+            <div class="about-vision">
+              <div class="about-vision-title">
+                His vision for Harrisburg is simple:
+              </div>
+              <div class="about-vision-text">
+                • Restoring Accountability: Ensuring tax dollars are used efficiently, not lost in bureaucracy.<br />
+                • Relief for Families: Fighting for property tax relief and tackling the rising cost of living.<br />
+                • Investing in Schools: Demanding a fair funding formula so that a child's quality of education isn't dictated by their zip code.<br />
+                • Safe Communities: Modernizing equipment for first responders and fixing the infrastructure that protects us from disasters.
+              </div>
+            </div>
+          </div>
+
+          <div class="about-bottom-note">
+            <p class="quote">
+              “I’ve spent my life working hard for this district, and I’m going to work just as hard to make sure you can actually afford to live in it.”
+            </p>
+
+            <p class="vote">
+              On May 19th, vote for a neighbor who knows your struggle and has spent a lifetime answering the call. Vote Michael "Scooby" Stadulis.
+            </p>
+
+            <p class="platform-note">
+              For a deeper dive into Michael’s specific policy goals, please visit our
+              <a href="#platform" onclick="showPage('platform')" style="color:#ffffff; font-weight:800; text-decoration:underline;">Platform page</a>.
+            </p>
+          </div>
+
+          <div class="btn-row">
+            <a class="btn" href="#" onclick="window.location.hash=''; showPage('home'); return false;">Main Page</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="platform">
+        <div class="glass page-card patriotic-bg">
+          <h2 class="page-title">Platform</h2>
+          <p class="page-subtitle"></p>
+
+          <div class="platform-grid">
+            <div class="platform-card">
+              <div class="platform-top">
+                <div class="platform-icon-number">
+                  <div class="platform-number">1</div>
+                </div>
+                <div class="platform-heading">
+                  <h3>Supporting Working Families</h3>
+                </div>
+              </div>
+              <p>
+                Right here in the 121st, I see neighbors making the impossible choice between keeping the lights on and filling a grocery cart. Our working families are the backbone of this community, yet you’re being squeezed by skyrocketing costs while wages barely budge. I’m running because getting by should not be a full-time struggle for people who work hard every single day. We need to tackle corporate price gouging and deliver meaningful property tax relief that puts money back in your pocket where it belongs. My priority is making sure essentials like childcare and healthcare are accessible to every family, not treated like luxury items.
+              </p>
+            </div>
+
+            <div class="platform-card">
+              <div class="platform-top">
+                <div class="platform-icon-number">
+                  <div class="platform-number">2</div>
+                </div>
+                <div class="platform-heading">
+                  <h3>Healthcare and Prescription Costs</h3>
+                </div>
+              </div>
+              <p>
+                No one in Pennsylvania should have to skip a dose of life-saving medicine just to keep their head above water. It’s wrong that big pharmaceutical companies are making record profits while seniors are forced to ration prescriptions. I’ll work to crack down on the middlemen and corporate interests that keep drug prices high and the system confusing. We need real transparency at the pharmacy counter and an end to the predatory practices that target our most vulnerable neighbors. Beyond prescription costs, I’ll also fight to protect our local clinics and hospitals from being gutted by private equity groups that put profits over patients.
+              </p>
+            </div>
+
+            <div class="platform-card">
+              <div class="platform-top">
+                <div class="platform-icon-number">
+                  <div class="platform-number">3</div>
+                </div>
+                <div class="platform-heading">
+                  <h3>Investing in Our Schools</h3>
+                </div>
+              </div>
+              <p>
+                A child’s zip code should never determine the quality of their education, but for too long Pennsylvania’s broken funding system has left districts like ours behind. Our teachers and staff do incredible work, but they should not have to reach into their own pockets for classroom supplies. We need a fair funding formula that takes the burden off local property owners while ensuring every classroom is fully equipped. That means modernizing aging school buildings, supporting vocational training, and investing in early childhood education so our schools are treated like the community anchors they are.
+              </p>
+            </div>
+
+            <div class="platform-card">
+              <div class="platform-top">
+                <div class="platform-icon-number">
+                  <div class="platform-number">4</div>
+                </div>
+                <div class="platform-heading">
+                  <h3>Holding Utilities Accountable</h3>
+                </div>
+              </div>
+              <p>
+                Our district is built by blue-collar workers and seniors who spent their lives keeping this community going. It is unacceptable that the people who built this area are now being crushed by utility rate hikes they cannot afford. While utility companies post record profits, working families are getting hit with rising bills and added fees that force too many to choose between heating their homes and buying groceries. I’ll take that fight directly to the PUC and push back against the rubber-stamping of new charges. You worked hard for this district, and you deserve to be able to afford to stay here.
+              </p>
+            </div>
+
+            <div class="platform-card">
+              <div class="platform-top">
+                <div class="platform-icon-number">
+                  <div class="platform-number">5</div>
+                </div>
+                <div class="platform-heading">
+                  <h3>Real Public Safety</h3>
+                </div>
+              </div>
+              <p>
+                I spent 25 years on the front lines as a paramedic, and I know what it means when every second counts. I’ve seen firsthand how often first responders are expected to do more with less — less staff, older equipment, and growing demands. That is not leadership. I’ll fight for the state funding needed to modernize equipment, address staffing shortages, and make sure the people protecting our communities have the support they need. We also need to stop treating first responders as the default answer for mental health and addiction crises that deserve better long-term solutions.
+              </p>
+            </div>
+
+            <div class="platform-card">
+              <div class="platform-top">
+                <div class="platform-icon-number">
+                  <div class="platform-number">6</div>
+                </div>
+                <div class="platform-heading">
+                  <h3>Rebuilding Our Infrastructure</h3>
+                </div>
+              </div>
+              <p>
+                For decades, I traveled these streets in the back of an ambulance, so I know exactly how crumbling roads, weak bridges, and outdated infrastructure affect response times and public safety. We have roads that should have been fixed long ago and critical systems that cannot keep getting patched over. This is about more than convenience — it is about protecting our neighborhoods, strengthening flood protections, improving water systems, and modernizing the power grid. District 121 deserves long-term investment, not temporary fixes.
+              </p>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <a class="btn" href="#" onclick="window.location.hash=''; showPage('home'); return false;">Main Page</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="upcomingevents">
+        <div class="glass page-card patriotic-bg">
+          <h2 class="page-title">Upcoming Events</h2>
+          <p class="page-subtitle"></p>
+
+          <h3 style="text-align:center; margin:0 0 6px;">Past Events</h3>
+
+          <div class="event-grid">
+            <div class="glass event-card">
+              <h3>Wilkes-Barre Township Easter Egg Hunt</h3>
+              <div class="event-image-wrap">
+                <img class="event-image" src="EEH.JPEG" alt="Wilkes-Barre Township Easter Egg Hunt" />
+              </div>
+            </div>
+
+            <div class="glass event-card">
+              <h3>Multi Cultural Event</h3>
+              <div class="event-image-wrap">
+                <img class="event-image" src="mcevent.JPEG" alt="Multi Cultural Event" />
+              </div>
+            </div>
+
+            <div class="glass event-card">
+              <h3>Wilkes-Barre St. Patricks Day Parade</h3>
+              <div class="event-image-wrap">
+                <img class="event-image" src="stpaddys.JPEG" alt="Wilkes-Barre St. Patricks Day Parade" />
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:16px;">
+            <div class="glass event-card">
+              <h3 style="min-height:auto;">Cris Nics Petition Signing</h3>
+              <div class="scroll-gallery">
+                <div class="scroll-track">
+                  <div class="scroll-slide"><img src="ps1.JPEG" alt="Cris Nics Petition Signing 1" /></div>
+                  <div class="scroll-slide"><img src="ps2.JPEG" alt="Cris Nics Petition Signing 2" /></div>
+                  <div class="scroll-slide"><img src="ps3.JPEG" alt="Cris Nics Petition Signing 3" /></div>
+                  <div class="scroll-slide"><img src="ps4.JPEG" alt="Cris Nics Petition Signing 4" /></div>
+                  <div class="scroll-slide"><img src="ps5.JPEG" alt="Cris Nics Petition Signing 5" /></div>
+                  <div class="scroll-slide"><img src="ps6.JPEG" alt="Cris Nics Petition Signing 6" /></div>
+                  <div class="scroll-slide"><img src="ps7.JPEG" alt="Cris Nics Petition Signing 7" /></div>
+                  <div class="scroll-slide"><img src="ps8.JPEG" alt="Cris Nics Petition Signing 8" /></div>
+                  <div class="scroll-slide"><img src="ps9.JPG" alt="Cris Nics Petition Signing 9" /></div>
+                  <div class="scroll-slide"><img src="ps10.JPEG" alt="Cris Nics Petition Signing 10" /></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <a class="btn" href="#" onclick="window.location.hash=''; showPage('home'); return false;">Main Page</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="joinourmission">
+        <div class="glass page-card patriotic-bg">
+          <h2 class="page-title">Join Our Mission</h2>
+
+          <div class="mission-donate">
+            <div class="mission-donate-head">
+              <div class="mission-icon">🇺🇸</div>
+              <div>
+                <h3>Support the Campaign</h3>
+              </div>
+            </div>
+
+            <div class="mission-address">
+              Checks can be sent to:<br />
+              Friends of Michael J. Stadulis<br />
+              P.O. Box 1724<br />
+              Plains Twp., PA 18705
+            </div>
+          </div>
+
+          <div class="mission-support-grid">
+            <div class="mission-card">
+              <div class="mission-card-head">
+                <div class="mission-icon">📍</div>
+                <div>
+                  <h3>Request a Yard Sign</h3>
+                </div>
+              </div>
+              <form onsubmit="return openMailto('yardsign')">
+                <input id="ys_name" type="text" placeholder="Full name" required />
+                <input id="ys_phone" type="tel" placeholder="Phone" required />
+                <input id="ys_address" type="text" placeholder="Address" required />
+                <button class="btn primary" type="submit">Request My Yard Sign</button>
+              </form>
+            </div>
+
+            <div class="mission-card">
+              <div class="mission-card-head">
+                <div class="mission-icon">📞</div>
+                <div>
+                  <h3>Make Calls</h3>
+                </div>
+              </div>
+              <form onsubmit="return openMailto('makecalls')">
+                <input id="mc_name" type="text" placeholder="Full name" required />
+                <input id="mc_phone" type="tel" placeholder="Phone" required />
+                <input id="mc_email" type="text" placeholder="Email" required />
+                <button class="btn primary" type="submit">Sign Up to Make Calls</button>
+              </form>
+            </div>
+
+            <div class="mission-card">
+              <div class="mission-card-head">
+                <div class="mission-icon">🎉</div>
+                <div>
+                  <h3>Events Committee</h3>
+                </div>
+              </div>
+              <form onsubmit="return openMailto('eventscommittee')">
+                <input id="ec_name" type="text" placeholder="Full name" required />
+                <input id="ec_phone" type="tel" placeholder="Phone" required />
+                <input id="ec_email" type="text" placeholder="Email" required />
+                <button class="btn primary" type="submit">Join the Events Committee</button>
+              </form>
+            </div>
+
+            <div class="mission-card">
+              <div class="mission-card-head">
+                <div class="mission-icon">💼</div>
+                <div>
+                  <h3>Fundraising Committee</h3>
+                </div>
+              </div>
+              <form onsubmit="return openMailto('fundraisingcommittee')">
+                <input id="fc_name" type="text" placeholder="Full name" required />
+                <input id="fc_phone" type="tel" placeholder="Phone" required />
+                <input id="fc_email" type="text" placeholder="Email" required />
+                <button class="btn primary" type="submit">Join Fundraising Efforts</button>
+              </form>
+            </div>
+
+            <div class="mission-card" style="grid-column:span 2;">
+              <div class="mission-card-head">
+                <div class="mission-icon">🗳️</div>
+                <div>
+                  <h3>Election Day Efforts</h3>
+                </div>
+              </div>
+              <form onsubmit="return openMailto('electionday')">
+                <input id="ed_name" type="text" placeholder="Full name" required />
+                <input id="ed_phone" type="tel" placeholder="Phone" required />
+                <input id="ed_email" type="text" placeholder="Email" required />
+                <button class="btn primary" type="submit">Help on Election Day</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <a class="btn" href="#" onclick="window.location.hash=''; showPage('home'); return false;">Main Page</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="contact">
+        <div class="glass page-card">
+          <h2 class="page-title">Contact</h2>
+          <p class="page-subtitle"></p>
+
+          <div class="contact-layout">
+            <div class="glass contact-bubble">
+              <h3>Contact Information</h3>
+              <strong>Email:</strong> michaeljstadulisforstaterep@gmail.com<br />
+              <strong>Phone:</strong> (570) 332-6979
+            </div>
+
+            <div class="glass social-bubble">
+              <h3>Social Media</h3>
+              <a
+                class="facebook-image-link"
+                href="https://www.facebook.com/share/17qeCiqTkZ/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img class="facebook-image" src="facebook.jpg" alt="Facebook" />
+              </a>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <a class="btn" href="#" onclick="window.location.hash=''; showPage('home'); return false;">Main Page</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
   </main>
 
   <footer>
     <div class="wrap">
-      <div class="footGrid">
-        <div class="fine">
-          <strong>Friends of Michael J. Stadulis</strong><br />
-          Paid for by Friends of Michael J. Stadulis.<br />
-          Not authorized by any candidate or candidate’s committee.
-        </div>
-        <div class="fine" style="text-align:left">
-          <strong>Election</strong><br />
-          Pennsylvania State Representative<br />
-          District 121
-        </div>
-      </div>
-
-      <div style="height:10px"></div>
-
-      <div class="fine">
-        © <span id="year"></span> Friends of Michael J. Stadulis. All rights reserved.
+      <div class="glass footer-box">
+        <strong>Friends of Michael J. Stadulis</strong><br />
+        Paid for by Friends of Michael J. Stadulis.<br />
+        Not authorized by any candidate or candidate’s committee.<br />
+        © 2026 Friends of Michael J. Stadulis. All rights reserved.
       </div>
     </div>
   </footer>
 
   <script>
-    // ======= Edit these two items ==========
     const CAMPAIGN_EMAIL = "michaeljstadulisforstaterep@gmail.com";
     const CAMPAIGN_SUBJECT_PREFIX = "District 121 Campaign";
-    // ======================================
 
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Mobile menu toggle
-    const menuBtn = document.getElementById("menuBtn");
-    const mobileNav = document.getElementById("mobileNav");
-
-    if (menuBtn && mobileNav) {
-      menuBtn.addEventListener("click", () => {
-        const open = mobileNav.style.display === "block";
-        mobileNav.style.display = open ? "none" : "block";
-        menuBtn.setAttribute("aria-expanded", open ? "false" : "true");
-      });
-
-      // Close mobile nav on click
-      document.querySelectorAll("#mobileNav a").forEach(a => {
-        a.addEventListener("click", () => {
-          mobileNav.style.display = "none";
-          menuBtn.setAttribute("aria-expanded", "false");
-        });
-      });
+    function encode(str){
+      return encodeURIComponent(str || "");
     }
 
-    // Mailto helpers
-    function encode(str){ return encodeURIComponent(str || ""); }
-
     function openMailto(type){
-      if (type === "volunteer") {
-        const name = document.getElementById("v_name").value;
-        const email = document.getElementById("v_email").value;
-        const phone = document.getElementById("v_tel").value;
-        const msg = document.getElementById("v_msg").value;
+      if(type === "yardsign"){
+        const name = document.getElementById("ys_name").value;
+        const phone = document.getElementById("ys_phone").value;
+        const address = document.getElementById("ys_address").value;
 
-        const subject = `${CAMPAIGN_SUBJECT_PREFIX} — Volunteer`;
-      
-        Window.location.href = `mailto:${CAMPAIGN_EMAIL}?subject=${encode(subject)}&body=${encode(body)}`;
-        return false;
-`Volunteer Signup
+        const subject = `${CAMPAIGN_SUBJECT_PREFIX} — Yard Sign Request`;
+        const body =
+`Yard Sign Request
 
 Name: ${name}
-Email: ${email}
 Phone: ${phone}
-
-How I’d like to help:
-${msg}
+Address: ${address}
 `;
+
         window.location.href = `mailto:${CAMPAIGN_EMAIL}?subject=${encode(subject)}&body=${encode(body)}`;
         return false;
       }
 
-      if (type === "contact") {
-        const name = document.getElementById("c_name").value;
-        const email = document.getElementById("c_email").value;
-        const phone = document.getElementById("v_tel").value;
-        const msg = document.getElementById("c_msg").value;
+      if(type === "makecalls"){
+        const name = document.getElementById("mc_name").value;
+        const phone = document.getElementById("mc_phone").value;
+        const email = document.getElementById("mc_email").value;
 
-        const subject = `${CAMPAIGN_SUBJECT_PREFIX} — Message`;
+        const subject = `${CAMPAIGN_SUBJECT_PREFIX} — Make Calls`;
         const body =
-`Name: ${name}
-Email: ${email}
-Phone: ${phone}
+`Make Calls
 
-Message:
-${msg}
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
 `;
+
+        window.location.href = `mailto:${CAMPAIGN_EMAIL}?subject=${encode(subject)}&body=${encode(body)}`;
+        return false;
+      }
+
+      if(type === "eventscommittee"){
+        const name = document.getElementById("ec_name").value;
+        const phone = document.getElementById("ec_phone").value;
+        const email = document.getElementById("ec_email").value;
+
+        const subject = `${CAMPAIGN_SUBJECT_PREFIX} — Events Committee`;
+        const body =
+`Events Committee
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+`;
+
+        window.location.href = `mailto:${CAMPAIGN_EMAIL}?subject=${encode(subject)}&body=${encode(body)}`;
+        return false;
+      }
+
+      if(type === "fundraisingcommittee"){
+        const name = document.getElementById("fc_name").value;
+        const phone = document.getElementById("fc_phone").value;
+        const email = document.getElementById("fc_email").value;
+
+        const subject = `${CAMPAIGN_SUBJECT_PREFIX} — Fundraising Committee`;
+        const body =
+`Fundraising Committee
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+`;
+
+        window.location.href = `mailto:${CAMPAIGN_EMAIL}?subject=${encode(subject)}&body=${encode(body)}`;
+        return false;
+      }
+
+      if(type === "electionday"){
+        const name = document.getElementById("ed_name").value;
+        const phone = document.getElementById("ed_phone").value;
+        const email = document.getElementById("ed_email").value;
+
+        const subject = `${CAMPAIGN_SUBJECT_PREFIX} — Election Day Efforts`;
+        const body =
+`Election Day Efforts
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+`;
+
         window.location.href = `mailto:${CAMPAIGN_EMAIL}?subject=${encode(subject)}&body=${encode(body)}`;
         return false;
       }
 
       return false;
     }
+
+    function showPage(pageId){
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.remove('active'));
+
+      const target = document.getElementById(pageId) || document.getElementById('home');
+      target.classList.add('active');
+
+      const links = document.querySelectorAll('.banner-nav a');
+      links.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${pageId}`);
+      });
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function handleRouting(){
+      const hash = window.location.hash.replace('#', '');
+      showPage(hash || 'home');
+    }
+
+    window.addEventListener('hashchange', handleRouting);
+    window.addEventListener('load', handleRouting);
   </script>
 </body>
 </html>
