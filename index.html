@@ -234,12 +234,12 @@
       transform:scale(1.02);
     }
 
- 	.endorsement-grid{
- 	 display:grid;
-  	grid-template-columns:repeat(2, 280px);
-  	justify-content:center;
-  	gap:20px;
-  	margin-top:16px;
+    .endorsement-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:16px;
+      margin-top:16px;
+      align-items:stretch;
     }
 
     .endorsement-card{
@@ -1062,31 +1062,39 @@
             <img src="scooby.jpg" alt="Michael J. Stadulis" />
           </div>
 
- <div style="margin-top:22px;">
-  <h2 class="page-title">Endorsements</h2>
+          <div style="margin-top:22px;">
+            <h2 class="page-title">Endorsements</h2>
 
-  <div class="endorsement-grid">
+            <div class="endorsement-grid">
+              <div class="endorsement-card">
+                <div class="endorsement-media">
+                  <img src="E1.jpeg" alt="Endorsement 1" />
+                </div>
+                <p>
+                  Wilkes-Barre Area School Board Member Denise Thomas and Former Wilkes-Barre City Councilman John Marconi
+                </p>
+              </div>
 
-    <div class="endorsement-card">
-      <div class="endorsement-media">
-        <img src="E1.jpeg" alt="Endorsement 1" />
-      </div>
-      <p>
-        Wilkes-Barre Area School Board Member Denise Thomas and Former Wilkes-Barre City Councilman John Marconi
-      </p>
-    </div>
+              <div class="endorsement-card">
+                <div class="endorsement-media">
+                  <img src="E2.jpg" alt="Endorsement 2" />
+                </div>
+                <p>
+                  Wilkes-Barre Area School Board Member and Geisinger Director of Diversity and Inclusion Instructor Arthur Breese
+                </p>
+              </div>
 
-    <div class="endorsement-card">
-      <div class="endorsement-media">
-        <img src="E2.jpg" alt="Endorsement 2" />
-      </div>
-      <p>
-        Wilkes-Barre Area School Board Member and Geisinger Director of Diversity and Inclusion Instructor Arthur Breese
-      </p>
-    </div>
-
-  </div>
-</div>
+              <div class="endorsement-card">
+                <div class="endorsement-media">
+                  <img src="E3.jpg" alt="Endorsement 3" />
+                </div>
+                <p>
+                  Laborers' International Union of North America Local 1310 Business Agent Thomas P. Borum
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="page" id="about">
